@@ -208,9 +208,20 @@ header {
     width: 33%;
 }
 
+.card-description {
+    text-align: center;
+}
+
 .card>p,
 .card-description>p {
     color: #000000;
+    text-align: center;
+}
+
+.card-description>a {
+    color: #A5CD51;
+    font-size: 1.25rem;
+    font-weight: 500;
 }
 
 /* секция документы */
