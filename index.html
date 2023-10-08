@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ПЕРЕКУПА.НЕТ</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="header__container">
+            <div class="logo__container">
+                <div class="logo">
+                    <h2>ПЕРЕКУПА.НЕТ</h2>
+                </div>
+                <div class="socials">
+                    <a href="#">
+                        <img src="./images/whatsup-icon.png" alt="WhatsUp Icon" width="30px" height="30px"></a>
+                    <a href="#">
+                        <img src="./images/viber-icon.png" alt="Viber Icon" width="30px" height="30px"></a>
+                    <a href="#">
+                        <img src="./images/telegram-icon.png" alt="Telegram Icon" width="30px" height="30px"></a>
+                </div>
+            </div>
+            <div class="phone__container">
+                <button class="button" type="submit">Вызвать оценщика</button>
+                <div class="phone">
+                    <p>Нужно продать авто? Звоните</p>
+                    <a href="#">+7 (993) 638 99 88</a>
+                </div>
+            </div>
+        </div>
+        <section class="hero">
+            <div class="hero__container">
+                <div class="hero-description">
+                    <h1>Выкуп всех авто
+                        <span>в любом состоянии в СПб</span>
+                    </h1>
+                    <p>Наши специалист приедет в любую точку Санкт-Петербурга для оценки Вашего авто на месте или
+                        оценит
+                        его по фото.</p>
+                </div>
+                <div class="form__bg"></div>
+                <form class="form" action="">
+                    <p class="form__title">Оставить заявку</p>
+                    <input class="form__input-name" type="text" name="name" placeholder="Имя" required>
+                    <input class="form__input-numb" type="tel" name="number" placeholder="Телефон" pattern="[0-9+()-]+"
+                        required>
+                    <textarea class="form__input-message" cols="37" name="message" placeholder="Сообщение"></textarea>
+                    <div class="form__agreement">
+                        <input class="form__checkbox" type="checkbox" id="politics" required>
+                        <p class="checkbox-text">Я соглашаюсь на обработку моих персональных данных</p>
+                    </div>
+                    <div class="form__btn-container">
+                        <button class="form__btn" type="submit">ОТПРАВИТЬ</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </header>
+    <main>
+        <section class="buyback__container">
+            <h2>Как происходит выкуп авто</h2>
+            <div class="buyback__cards">
+                <div class="card">
+                    <img src="./images/card1.png" alt="Оставить заявку" width="130" height="130">
+                    <div class="card-description">
+                        <p>Вы оставляете заявку на сайте или звоните по номеру</p>
+                        <a href="#"> +7 (993) 638 99 88</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./images/card2.png" alt="Предварительный расчет стоимости и выезд специалиста" width="130"
+                        height="130">
+                    <p>Получаете предварительный расчет стоимости вашего автомобиля и согласуете выезд специалиста
+                        оценщика</p>
+                </div>
+                <div class="card">
+                    <img src="./images/card3.png" alt="Составление договора" width="130" height="130">
+                    <p>Специалист осматривает Ваш автомобиль и, при согласовании цены, составляет официальный
+                        договор,
+                        сразу передавая деньги наличными или оформляя перевод на расчетный счет
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="documents">
+            <div class="documents__container">
+                <h2>Какие документы необходимы для срочного выкупа</h2>
+                <div class="documents__cards">
+                    <div class="documents__card">
+                        <img src="./images/pts.png" alt="ПТС на автомобиль" width="256" height="256">
+                        <p>ПТС</p>
+                    </div>
+                    <div class="documents__card">
+                        <img src="./images/password.png" alt="Паспорт владельца авто" width="256" height="256">
+                        <p>Паспорт владельца авто</p>
+                    </div>
+                    <div class="documents__card">
+                        <img src="./images/keys-for-car.png" alt="Ключи и документы на авто" width="256" height="256">
+                        <p>Ключи от авто, Сервисная книжка, Свидетельство регистрации ТС</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="contacts__form">
+        <div class="contacts__form-container">
+            <div class="form__bg-footer"></div>
+            <form class="form__footer" action="">
+                <p class="form__title">Остались вопросы?</p>
+                <p class="form__description">Если у вас остались вопросы, напишите их ниже наш специалист ответит вам в
+                    течение 5 минут</p>
+                <textarea class="form__input-message" cols="37" name="message" placeholder="Сообщение"></textarea>
+                <input class="form__input-numb" type="tel" name="number" placeholder="Телефон" pattern="[0-9+()-]+"
+                    required>
+                <div class="form__agreement">
+                    <input class="form__checkbox" type="checkbox" id="politics" required>
+                    <p class="checkbox-text">Я соглашаюсь на обработку моих персональных данных</p>
+                </div>
+                <button class="form__btn" type="submit">ОТПРАВИТЬ</button>
+            </form>
+            <div class="contacts">
+                <p class="contacts__description">Также вы всегда можете получить ответ на свой вопрос по телефону:
+                </p>
+                <a class="contacts__phone-number" href="tel:+7 (993) 638 99 88">+7 (993) 638 99 88</a>
+                <p class="contacts__description">или написать в любом удобном мессенджере
+                </p>
+                <div class="contacts__socials">
+                    <a href="https://wa.me/79939741717"><img src="./images/whatsapp-icon-footer.png" alt="WhatsApp"
+                            width="60px" height="60px"></a>
+                    <a href="viber://chat/?number=%2B79939741717"><img src="./images/viber-icon-footer.png" alt="Viber"
+                            width="60px" height="60px"></a>
+                    <a href="https://t.me/+79939741717"><img src="./images/telegram-icon-footer.png" alt="Telegram"
+                            width="60px" height="60px"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

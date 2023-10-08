@@ -1,0 +1,325 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    font-size: 2.125rem;
+    font-weight: 500;
+    color: #FFFFFF;
+}
+
+p {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #FFFFFF;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.35) 100%), url(./images/bg.jpg), lightgray 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* header */
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.875rem 3.75rem;
+}
+
+.logo__container {
+    display: flex;
+    gap: 1.875rem;
+}
+
+.phone__container {
+    display: flex;
+    gap: 1.875rem;
+}
+
+.button {
+    background: inherit;
+    padding: 1.125rem 1.875rem;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #FFFFFF;
+    border: #FFFFFF solid 3px;
+}
+
+.phone {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.phone>p {
+    letter-spacing: 0.5px;
+    color: #FFFFFF;
+}
+
+.phone>a {
+    font-size: 1.75rem;
+    font-weight: 500;
+    color: #FFFFFF;
+}
+
+/* hero */
+
+.hero {
+    padding: 0 3.75rem;
+}
+
+.hero__container {
+    display: flex;
+    gap: 8.125rem;
+    padding: 6.063rem 6.5rem 4.563rem 8.031rem;
+    position: relative;
+}
+
+.hero-description {
+    display: flex;
+    flex-direction: column;
+    gap: 1.875rem;
+    justify-content: center;
+}
+
+.hero-description>h1 {
+    font-size: 3rem;
+    font-weight: 500;
+    color: #FFFFFF;
+}
+
+.hero-description>h1>span {
+    font-size: 2.25rem;
+}
+
+.form__bg {
+    position: absolute;
+    width: 430px;
+    right: 104px;
+    bottom: 73px;
+    height: 464px;
+    border-radius: 30px;
+    background-color: #A5CD51;
+    box-shadow: 0px 4px 4px 0px rgba(7, 51, 77, 0.20);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.688rem;
+    background: #FFFFFF;
+    border: none;
+    padding: 2.5rem;
+    border-radius: 30px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    max-width: 430px;
+    position: relative;
+}
+
+.form__title {
+    color: #000000;
+    font-size: 1.25rem;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.form__input-name,
+.form__input-numb,
+.form__input-message {
+    background: #F4F4F4;
+    border: none;
+    padding: 0.625rem;
+    font-size: 1rem;
+    font-weight: 300;
+    color: #000000;
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.form__input-message {
+    height: 4.75rem;
+    resize: none;
+}
+
+.form__agreement {
+    display: flex;
+    gap: 0.375rem;
+}
+
+.checkbox-text {
+    color: #000000;
+    font-size: 0.625rem;
+    font-weight: 300;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.form__btn-container {
+    display: flex;
+    justify-content: center;
+}
+
+.form__btn {
+    border-radius: 30px;
+    background: #A5CD51;
+    border: 1px solid #A5CD51;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #FFFFFF;
+    padding: 0.875rem 1.25rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* секция выкуп авто */
+
+.buyback__container {
+    padding: 2.5rem 3.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    align-items: center;
+}
+
+.buyback__container>h2 {
+    color: #000000;
+}
+
+.buyback__cards {
+    display: flex;
+    align-items: flex-start;
+    padding: 0 7.188rem;
+}
+
+.card {
+    padding: 1.25rem 1.875rem 0 1.875rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+}
+
+.card>p,
+.card-description>p {
+    color: #000000;
+}
+
+/* секция документы */
+
+.documents {
+    background: url(./images/green-bg.png), lightgray 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.documents__container {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    align-items: center;
+    padding: 2.5rem 3.75rem;
+}
+
+.documents__cards {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.25rem;
+}
+
+.documents__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.625rem;
+}
+
+.documents__card>p {
+    font-size: 1.25rem;
+}
+
+/* footer */
+
+.contacts__form {
+    background: url(./images/footer-bg.png), lightgray 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.contacts__form-container {
+    padding: 2.5rem 3.75rem 4.375rem 3.75rem;
+    display: flex;
+    gap: 5rem;
+    position: relative;
+}
+
+.form__bg-footer {
+    position: absolute;
+    width: 430px;
+    left: 55px;
+    bottom: 46px;
+    height: 464px;
+    border-radius: 30px;
+    background-color: #A5CD51;
+    box-shadow: 0px 4px 4px 0px rgba(7, 51, 77, 0.20);
+}
+
+.form__footer {
+    display: flex;
+    flex-direction: column;
+    gap: 1.688rem;
+    background: #FFFFFF;
+    border: none;
+    padding: 2.5rem;
+    border-radius: 30px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    max-width: 430px;
+    position: relative;
+}
+
+.form__description {
+    color: #000000;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.875rem;
+}
+
+.contacts__links-box {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 1.875rem;
+}
+
+.contacts__description {
+    color: #000000;
+    font-size: 1.5rem;
+    font-weight: 500;
+    max-width: 82%;
+}
+
+.contacts__phone-number {
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: #A5CD51;
+}
+
+.contacts__socials {
+    width: 100%;
+    display: flex;
+    gap: 2.188rem;
+}
