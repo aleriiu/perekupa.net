@@ -34,11 +34,18 @@ header {
 .header__container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 1.875rem 3.75rem;
 }
 
 .logo__container {
     display: flex;
+    gap: 1.875rem;
+}
+
+.socials {
+    display: flex;
+    align-items: center;
     gap: 1.875rem;
 }
 
@@ -87,27 +94,27 @@ header {
     position: relative;
 }
 
-.hero-description {
+.hero__description {
     display: flex;
     flex-direction: column;
     gap: 1.875rem;
     justify-content: center;
 }
 
-.hero-description>h1 {
+.hero__description-header>h1 {
     font-size: 3rem;
     font-weight: 500;
     color: #FFFFFF;
 }
 
-.hero-description>h1>span {
+.hero__description-header>p {
     font-size: 2.25rem;
 }
 
 .form__bg {
     position: absolute;
     width: 430px;
-    right: 78px;
+    right: 84px;
     bottom: 52px;
     height: 464px;
     border-radius: 30px;

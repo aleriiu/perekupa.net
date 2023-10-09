@@ -1,0 +1,35 @@
+@media (max-width: 1024px) {
+
+    .header__container {
+        padding: 1.875rem 1.75rem;
+    }
+
+    .socials {
+        gap: 0.875rem;
+    }
+
+    .button {
+        padding: 1rem 1.275rem;
+    }
+
+    .hero {
+        padding: 0 1.75rem;
+    }
+
+    .hero__container {
+        padding: 2.063rem 1.5rem 4.563rem 1.031rem;
+        gap: 3.125rem;
+    }
+
+    .form__bg {
+        right: 0px;
+    }
+
+    .buyback__cards {
+        padding: 0;
+    }
+}
+
+@media (max-width: 800px) {}
+
+@media (max-width: 599px) {} 
