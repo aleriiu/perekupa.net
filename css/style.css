@@ -1,7 +1,10 @@
+@import url(./handil-pro.css);
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Handil Pro', sans-serif;
 }
 
 h2 {
@@ -21,7 +24,7 @@ a {
 }
 
 header {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.35) 100%), url(./images/bg.jpg), lightgray 50%;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.35) 100%), url(../images/bg.jpg), lightgray 50%;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -104,8 +107,8 @@ header {
 .form__bg {
     position: absolute;
     width: 430px;
-    right: 104px;
-    bottom: 73px;
+    right: 78px;
+    bottom: 52px;
     height: 464px;
     border-radius: 30px;
     background-color: #A5CD51;
@@ -227,7 +230,7 @@ header {
 /* секция документы */
 
 .documents {
-    background: url(./images/green-bg.png), lightgray 50%;
+    background: url(../images/green-bg.png), lightgray 50%;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -262,7 +265,7 @@ header {
 /* footer */
 
 .contacts__form {
-    background: url(./images/footer-bg.png), lightgray 50%;
+    background: url(../images/footer-bg.png), lightgray 50%;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -277,8 +280,8 @@ header {
 .form__bg-footer {
     position: absolute;
     width: 430px;
-    left: 55px;
-    bottom: 46px;
+    left: 40px;
+    bottom: 50px;
     height: 464px;
     border-radius: 30px;
     background-color: #A5CD51;
