@@ -14,31 +14,34 @@
 </head>
 
 <body>
-    <header>
-        <div class="header__container">
-            <div class="logo__container">
-                <div class="logo">
-                    <h2>ПЕРЕКУПА.НЕТ</h2>
+    <div class="hero-bg-container">
+        <header>
+            <div class="header__container">
+                <div class="logo__container">
+                    <div class="logo">
+                        <h2>ПЕРЕКУПА.НЕТ</h2>
+                    </div>
+                    <div class="socials">
+                        <a href="#">
+                            <img src="./images/whatsup-icon.png" alt="WhatsUp Icon" width="30px" height="30px"></a>
+                        <a href="#">
+                            <img src="./images/viber-icon.png" alt="Viber Icon" width="30px" height="30px"></a>
+                        <a href="#">
+                            <img src="./images/telegram-icon.png" alt="Telegram Icon" width="30px" height="30px"></a>
+                    </div>
                 </div>
-                <div class="socials">
-                    <a href="#">
-                        <img src="./images/whatsup-icon.png" alt="WhatsUp Icon" width="30px" height="30px"></a>
-                    <a href="#">
-                        <img src="./images/viber-icon.png" alt="Viber Icon" width="30px" height="30px"></a>
-                    <a href="#">
-                        <img src="./images/telegram-icon.png" alt="Telegram Icon" width="30px" height="30px"></a>
+                <div class="phone__container">
+                    <button class="button" type="submit">Вызвать оценщика</button>
+                    <div class="phone">
+                        <p>Нужно продать авто? Звоните</p>
+                        <a href="#">+7 (993) 638 99 88</a>
+                    </div>
                 </div>
             </div>
-            <div class="phone__container">
-                <button class="button" type="submit">Вызвать оценщика</button>
-                <div class="phone">
-                    <p>Нужно продать авто? Звоните</p>
-                    <a href="#">+7 (993) 638 99 88</a>
-                </div>
-            </div>
-        </div>
+
+        </header>
         <section class="hero">
-            <div class="hero__container">
+            <div class="hero__container container">
                 <div class="hero__description">
                     <div class="hero__description-header">
                         <h1>Выкуп всех авто</h1>
@@ -48,8 +51,7 @@
                         оценит
                         его по фото.</p>
                 </div>
-                <div class="form__bg"></div>
-                <form class="form" action="">
+                <form class="form form-after" action="">
                     <p class="form__title">Оставить заявку</p>
                     <input class="form__input-name" type="text" name="name" placeholder="Имя" required>
                     <input class="form__input-numb" type="tel" name="number" placeholder="Телефон" pattern="[0-9+()-]+"
@@ -65,35 +67,37 @@
                 </form>
             </div>
         </section>
-    </header>
+    </div>
     <main>
-        <section class="buyback__container">
-            <h2>Как происходит выкуп авто</h2>
-            <div class="buyback__cards">
-                <div class="card">
-                    <img src="./images/card1.png" alt="Оставить заявку" width="130" height="130">
-                    <div class="card-description">
-                        <p>Вы оставляете заявку на сайте или звоните по номеру</p>
-                        <a href="#"> +7 (993) 638 99 88</a>
+        <section class="buyback">
+            <div class="buyback__container container">
+                <h2>Как происходит выкуп авто</h2>
+                <div class="buyback__cards">
+                    <div class="card">
+                        <img src="./images/card1.png" alt="Оставить заявку" width="130" height="130">
+                        <div class="card-description">
+                            <p>Вы оставляете заявку на сайте или звоните по номеру</p>
+                            <a href="#"> +7 (993) 638 99 88</a>
+                        </div>
                     </div>
-                </div>
-                <div class="card">
-                    <img src="./images/card2.png" alt="Предварительный расчет стоимости и выезд специалиста" width="130"
-                        height="130">
-                    <p>Получаете предварительный расчет стоимости вашего автомобиля и согласуете выезд специалиста
-                        оценщика</p>
-                </div>
-                <div class="card">
-                    <img src="./images/card3.png" alt="Составление договора" width="130" height="130">
-                    <p>Специалист осматривает Ваш автомобиль и, при согласовании цены, составляет официальный
-                        договор,
-                        сразу передавая деньги наличными или оформляя перевод на расчетный счет
-                    </p>
+                    <div class="card">
+                        <img src="./images/card2.png" alt="Предварительный расчет стоимости и выезд специалиста"
+                            width="130" height="130">
+                        <p>Получаете предварительный расчет стоимости вашего автомобиля и согласуете выезд специалиста
+                            оценщика</p>
+                    </div>
+                    <div class="card">
+                        <img src="./images/card3.png" alt="Составление договора" width="130" height="130">
+                        <p>Специалист осматривает Ваш автомобиль и, при согласовании цены, составляет официальный
+                            договор,
+                            сразу передавая деньги наличными или оформляя перевод на расчетный счет
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
         <section class="documents">
-            <div class="documents__container">
+            <div class="documents__container container">
                 <h2>Какие документы необходимы для срочного выкупа</h2>
                 <div class="documents__cards">
                     <div class="documents__card">
@@ -112,10 +116,9 @@
             </div>
         </section>
     </main>
-    <footer class="contacts__form">
-        <div class="contacts__form-container">
-            <div class="form__bg-footer"></div>
-            <form class="form__footer" action="">
+    <footer class="footer">
+        <div class="footer-container container">
+            <form class="form form-before" action="">
                 <p class="form__title">Остались вопросы?</p>
                 <p class="form__description">Если у вас остались вопросы, напишите их ниже наш специалист ответит вам в
                     течение 5 минут</p>
