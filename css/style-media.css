@@ -1,5 +1,5 @@
 
-@media (min-width: 1441px){
+@media (min-width: 1921px){
      .container {
         width: 70%;
         margin: 0 auto;
@@ -12,8 +12,44 @@
 
 @media (max-width: 1024px) {
 
-    .header__container {
-        padding: 1.875rem 1.75rem;
+    .header-container,
+    section,
+    .footer {
+        padding: 2rem;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .logo-container,
+    .phone-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+
+    .logo h2,
+    .phone a {
+        font-size: 1.5rem;
+    }
+
+    .phone p {
+        font-size: 0.7rem;
+    }
+
+    .hero__description {
+        max-width: 100%;
+    }
+
+    .hero__container {
+        padding-bottom: 2rem;
+        gap: 2rem;
+    }
+
+    .buyback__cards,
+    .documents__cards {
+        flex-wrap: wrap;
     }
 
     .socials {
@@ -21,24 +57,21 @@
     }
 
     .button {
-        padding: 1rem 1.275rem;
+        padding: 0.5rem 1rem;
     }
 
-    .hero {
-        padding: 0 1.75rem;
-    }
-
-    .hero__container {
-        padding: 2.063rem 1.5rem 4.563rem 1.031rem;
-        gap: 3.125rem;
-    }
-
-    .form__bg {
-        right: 0px;
-    }
 
     .buyback__cards {
         padding: 0;
+    }
+
+    .contacts {
+        align-items: center;
+    }
+
+    .contacts__description {
+        max-width: 100%;
+        text-align: center;
     }
 }
 
