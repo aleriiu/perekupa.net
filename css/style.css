@@ -318,6 +318,7 @@ section,
     display: flex;
     justify-content: space-between;
     cursor: pointer;
+    max-width: 90%;
 }
 
 .faq__item:after {
