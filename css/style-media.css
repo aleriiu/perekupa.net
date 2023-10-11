@@ -1,6 +1,5 @@
-
-@media (min-width: 1921px){
-     .container {
+@media (min-width: 1921px) {
+    .container {
         width: 70%;
         margin: 0 auto;
     }
@@ -22,12 +21,6 @@
         flex-direction: column;
     }
 
-    .logo-container,
-    .phone-container {
-        flex-direction: column;
-        gap: 1rem;
-    }
-    
 
     .logo h2,
     .phone a {
@@ -75,6 +68,62 @@
     }
 }
 
-@media (max-width: 800px) {}
+@media (max-width: 800px) {
 
-@media (max-width: 599px) {} 
+    .logo-container {
+        gap: 0.6rem;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .phone {
+        align-items: center;
+        gap: 0.6rem;
+    }
+
+    .contacts__phone-number {
+        font-size: 2rem;
+    }
+
+    .footer-container {
+        padding: 2.5rem 2.75rem 4.375rem 2.75rem;
+    }
+}
+
+@media (max-width: 599px) {
+
+    .header-container {
+        flex-direction: column;
+        gap: 0.6rem;
+    }
+
+    .hero__description-header>h1 {
+        font-size: 2.3rem;
+    }
+
+    .hero__description-header>p {
+        font-size: 1.3rem;
+    }
+
+    p {
+        font-size: 0.8rem;
+    }
+
+    .buyback__title,
+    .document__title,
+    .faq__title {
+        font-size: 1.5rem;
+    }
+
+    .contacts__description {
+        font-size: 1rem;
+    }
+
+    .contacts__phone-number {
+        font-size: 1.5rem;
+    }
+
+    .footer-container {
+        padding: 2.5rem 0.55rem 4.375rem 0.55rem;
+    }
+}
