@@ -45,6 +45,10 @@
         flex-wrap: wrap;
     }
 
+    .documents__cards {
+        justify-content: space-around;
+    }
+
     .socials {
         gap: 0.875rem;
     }
@@ -85,12 +89,29 @@
         font-size: 2rem;
     }
 
+
+    .form__input-name,
+    .form__input-numb,
+    .form__input-message {
+        width: 100%;
+    }
+
     .footer-container {
-        padding: 2.5rem 2.75rem 4.375rem 2.75rem;
+        padding: 2.5rem 2.75rem 1.375rem 2.75rem;
+    }
+
+    .documents__card > img {
+        width: 100%;
     }
 }
 
 @media (max-width: 599px) {
+
+    .header-container,
+    section,
+    .footer {
+        padding: 1.5rem;
+    }
 
     .header-container {
         flex-direction: column;
@@ -115,6 +136,15 @@
         font-size: 1.5rem;
     }
 
+    .faq__header,
+    .faq__answer {
+        font-size: 0.8rem;
+    }
+
+    .documents__card>p {
+        font-size: 0.8rem;
+    }
+
     .contacts__description {
         font-size: 1rem;
     }
@@ -124,6 +154,41 @@
     }
 
     .footer-container {
-        padding: 2.5rem 0.55rem 4.375rem 0.55rem;
+        padding: 2.5rem 0.55rem 1.375rem 0.55rem;
+    }
+
+    .form {
+        padding: 1.5rem 1rem;
+        max-width: none;
+        gap: 1rem;
+    }
+
+    .form__title {
+        text-align: center;
+    }
+
+    .form__description {
+        font-size: 0.8rem;
+        text-align: center;
+    }
+
+    .form-marginRight {
+        margin-right: 0px;
+    }
+
+    .form-marginLeft {
+        margin-left: 0px;
+    }
+
+    .form-after::after {
+        left: 0px;
+    }
+
+    .form-before::before {
+        right: 0px;
+    }
+
+    .form-container {
+        width: 100%;
     }
 }

@@ -2,34 +2,22 @@
 
 // аккордеон
 
-const accrodHeaders = document.querySelectorAll(".faq__header");
-accrodHeaders.forEach((ach) => {
-  ach.addEventListener("click", toggelItem, false);
-});
+const accordionItemHeaders = document.querySelectorAll(".faq__header");
 
-function toggelItem() {
-  const currentContentEle = this.nextElementSibling;
+accordionItemHeaders.forEach(accordionItemHeader => {
+  accordionItemHeader.addEventListener("click", event => {
 
-  const isCollapsed = currentContentEle.classList.contains("collapse");
-
-  accrodHeaders.forEach((ach) => {
-    const contentEle = ach.nextElementSibling;
-    if (!contentEle.classList.contains("collapse")) {
-      contentEle.classList.add("collapse");
+    accordionItemHeader.classList.toggle("active");
+    const accordionItemBody = accordionItemHeader.nextElementSibling;
+    if(accordionItemHeader.classList.contains("active")) {
+      accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px";
     }
+    else {
+      accordionItemBody.style.maxHeight = 0;
+    }
+    
   });
-
-  if (isCollapsed) {
-    currentContentEle.classList.remove("collapse");
-  }
-}
-
-for (let i = 0; i < accrodHeaders.length; i++) {
-    accrodHeaders[i].addEventListener("click", function() {
-        /* изменение + на - */
-        this.classList.toggle("active");
-    });
-}
+});
 
 
 // форма
@@ -61,6 +49,5 @@ form.addEventListener('submit', async (e) => {
     messageInput.value ='';
 
     alert('Сообщение отправлено!');
-
 
 })
