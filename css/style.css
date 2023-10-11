@@ -287,6 +287,7 @@ section,
     border-radius: 30px;
     border: 3px solid #A5CD51;
     width: 100%;
+    position: relative;
 }
 
 .faq__item:nth-child(even) {
@@ -299,12 +300,12 @@ section,
     cursor: pointer;
 }
 
-.faq__header:after {
+.faq__item:after {
     content: '\02795'; /* Unicode character for "plus" sign (+) */
-    font-size: 13px;
+    font-size: 16px;
     color: #777;
-    float: right;
-    margin-left: 5px;
+    right: 30px;
+    position: absolute;
 }
 
 .active:after {

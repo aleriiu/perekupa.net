@@ -2,13 +2,13 @@
 
 // аккордеон
 
-const accordionItemHeaders = document.querySelectorAll(".faq__header");
+const accordionItemHeaders = document.querySelectorAll(".faq__item");
 
 accordionItemHeaders.forEach(accordionItemHeader => {
   accordionItemHeader.addEventListener("click", event => {
 
     accordionItemHeader.classList.toggle("active");
-    const accordionItemBody = accordionItemHeader.nextElementSibling;
+    const accordionItemBody = accordionItemHeader.querySelector(".faq__content");
     if(accordionItemHeader.classList.contains("active")) {
       accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px";
     }
