@@ -34,6 +34,19 @@ a {
     transform: translateY(-3px);
 }
 
+.form__btn:focus,
+.form__btn:active {
+    background: #8ab431;
+}
+
+input:focus,
+textarea:focus {
+    border: 1px solid #A5CD51;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+
 .hero-bg-container {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.35) 100%), url(../images/bg.jpg), lightgray 50%;
     background-repeat: no-repeat;
@@ -308,7 +321,8 @@ section,
 }
 
 .faq__item:after {
-    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    content: '\02795';
+    /* Unicode character for "plus" sign (+) */
     font-size: 16px;
     color: #777;
     right: 30px;
@@ -316,13 +330,19 @@ section,
 }
 
 .active:after {
-    content: "\2796"; /* Unicode character for "minus" sign (-) */
+    content: "\2796";
+    /* Unicode character for "minus" sign (-) */
+}
+
+.active {
+    background: #F4F4F4;
 }
 
 .faq__content {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.2s ease-out;
+    transition: all 0.4s ease-out;
+
 }
 
 .faq__answer {
