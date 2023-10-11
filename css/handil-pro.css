@@ -1,5 +1,9 @@
 @font-face {
     font-family: 'CabinetGrotesk-Variable';
-    src: url('../fonts/HandilPro-Medium.otf') format('otf'), url('../fonts/HandilPro-Medium.ttf') format('truetype'), url('../fonts/HandilPro-Medium.woff') format('woff');
+    src: url('../fonts/HandilPro-Medium.otf') format('otf'),
+        url('../fonts/HandilPro-Medium.ttf') format('truetype'),
+        url('../fonts/HandilPro-Medium.woff') format('woff');
     font-weight: 500;
+    font-display: swap;
+    font-style: normal;
 }
