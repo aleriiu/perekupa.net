@@ -25,6 +25,13 @@ p {
 
 a {
     text-decoration: none;
+    transition: transform 250ms ease-in-out;
+}
+
+.hasHover a:hover {
+    -webkit-transform: translateY(-3px);
+    -ms-transform: translateY(-3px);
+    transform: translateY(-3px);
 }
 
 .hero-bg-container {
@@ -291,7 +298,7 @@ section,
 }
 
 .faq__item:nth-child(even) {
-    border: 3px solid #286493;
+    border: 3px solid #2166a6;
 }
 
 .faq__header {
