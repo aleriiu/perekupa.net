@@ -35,7 +35,7 @@ form.addEventListener('submit', async (e) => {
     const text = `Сообщение из формы 1\r\n\r\nИмя: ${nameInputOne.value}\r\nТелефон: ${phoneInputOne.value}\r\nСообщение: ${messageInputOne.value}`;
 
     const formData = new FormData();
-    formData.append('chat_id', 6679838375);
+    formData.append('chat_id', 259046312);
     formData.append('parse_mode', 'Markdown');
     formData.append('text', text);
 
@@ -66,7 +66,7 @@ formTwo.addEventListener('submit', async (e) => {
     const text = `Сообщение из формы 2\r\nТелефон: ${phoneInputTwo.value}\r\nСообщение: ${messageInputTwo.value}`;
 
     const formData = new FormData();
-    formData.append('chat_id', 6679838375);
+    formData.append('chat_id', 259046312);
     formData.append('parse_mode', 'Markdown');
     formData.append('text', text);
 
