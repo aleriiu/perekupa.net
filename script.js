@@ -20,22 +20,22 @@ accordionItemHeaders.forEach(accordionItemHeader => {
 });
 
 
-// форма
+// форма 1
 
-const form = document.querySelector('form');
+const form = document.querySelector('#form-1');
 
 form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    const nameInput = form.querySelector('.form__input-name');
-    const phoneInput = form.querySelector('.form__input-numb');
-    const messageInput = form.querySelector('.form__input-message');
-    const url = '#';
+    const nameInputOne = form.querySelector('#form-1-name');
+    const phoneInputOne = form.querySelector('#form-1-numb');
+    const messageInputOne = form.querySelector('#form-1-message');
+    const url = 'https://api.telegram.org/bot6663438165:AAESG6Jt1J3btraE_rz614EDDUf4jk0mQlM/sendMessage';
 
-    const text = `Сообщение из формы\r\n\r\nИмя: ${nameInput.value}\r\nТелефон: ${phoneInput.value}\r\nСообщение: ${messageInput.value}`;
+    const text = `Сообщение из формы 1\r\n\r\nИмя: ${nameInputOne.value}\r\nТелефон: ${phoneInputOne.value}\r\nСообщение: ${messageInputOne.value}`;
 
     const formData = new FormData();
-    formData.append('chat_id', 5834096777);
+    formData.append('chat_id', 259046312);
     formData.append('parse_mode', 'Markdown');
     formData.append('text', text);
 
@@ -44,9 +44,39 @@ form.addEventListener('submit', async (e) => {
         body: formData
     });
 
-    nameInput.value = '';
-    phoneInput.value = '';
-    messageInput.value ='';
+    nameInputOne.value = '';
+    phoneInputOne.value = '';
+    messageInputOne.value ='';
+
+    alert('Сообщение отправлено!');
+
+})
+
+// форма 1
+
+const formTwo = document.querySelector('#form-2');
+
+formTwo.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const phoneInputTwo = formTwo.querySelector('#form-2-numb');
+    const messageInputTwo = formTwo.querySelector('#form-2-message');
+    const urlTwo = 'https://api.telegram.org/bot6663438165:AAESG6Jt1J3btraE_rz614EDDUf4jk0mQlM/sendMessage';
+
+    const text = `Сообщение из формы 2\r\nТелефон: ${phoneInputTwo.value}\r\nСообщение: ${messageInputTwo.value}`;
+
+    const formData = new FormData();
+    formData.append('chat_id', 259046312);
+    formData.append('parse_mode', 'Markdown');
+    formData.append('text', text);
+
+    const response = await fetch(urlTwo, {
+        method: 'POST',
+        body: formData
+    });
+
+    phoneInputTwo.value = '';
+    messageInputTwo.value ='';
 
     alert('Сообщение отправлено!');
 

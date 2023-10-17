@@ -52,19 +52,19 @@
                         его по фото.</p>
                 </div>
                 <div class="form-container">
-                    <form class="form form-after form-marginRight" action="">
+                    <form id="form-1" class="form form-after form-marginRight" action="">
                         <p class="form__title">Оставить заявку</p>
-                        <input class="form__input-name" type="text" name="name" placeholder="Имя" required>
-                        <input class="form__input-numb" type="tel" name="number" placeholder="Телефон"
+                        <input id="form-1-name" class="form__input-name" type="text" name="name" placeholder="Имя" required>
+                        <input id="form-1-numb" class="form__input-numb" type="tel" name="number" placeholder="Телефон"
                             pattern="[0-9+()-]+" required>
-                        <textarea class="form__input-message" cols="37" name="message"
+                        <textarea id="form-1-message" class="form__input-message" cols="37" name="message"
                             placeholder="Сообщение"></textarea>
                         <div class="form__agreement">
                             <input class="form__checkbox" type="checkbox" id="politics" required>
                             <p class="checkbox-text">Я соглашаюсь на обработку моих персональных данных</p>
                         </div>
                         <div class="form__btn-container">
-                            <button class="form__btn" type="submit">ОТПРАВИТЬ</button>
+                            <button id="form-1-btn" class="form__btn" type="submit">ОТПРАВИТЬ</button>
                         </div>
                     </form>
                 </div>
@@ -172,20 +172,20 @@
     <footer class="footer">
         <div class="footer-container container">
             <div class="form-container">
-                <form class="form form-before form-marginLeft" action="">
+                <form id="form-2" class="form form-before form-marginLeft" action="">
                     <p class="form__title">Остались вопросы?</p>
                     <p class="form__description">Если у вас остались вопросы, напишите их ниже наш специалист ответит
                         вам в
                         течение 5&nbsp;минут</p>
-                    <textarea class="form__input-message" cols="37" name="message" placeholder="Сообщение"></textarea>
-                    <input class="form__input-numb" type="tel" name="number" placeholder="Телефон" pattern="[0-9+()-]+"
+                    <textarea id="form-2-message" class="form__input-message" cols="37" name="message" placeholder="Сообщение"></textarea>
+                    <input id="form-2-numb" class="form__input-numb" type="tel" name="number" placeholder="Телефон" pattern="[0-9+()-]+"
                         required>
                     <div class="form__agreement">
                         <input class="form__checkbox" type="checkbox" id="politics" required>
                         <p class="checkbox-text">Я соглашаюсь на обработку моих персональных данных</p>
                     </div>
                     <div class="form__btn-container">
-                        <button class="form__btn" type="submit">ОТПРАВИТЬ</button>
+                        <button id="form-2-btn" class="form__btn" type="submit">ОТПРАВИТЬ</button>
                     </div>
                 </form>
             </div>
