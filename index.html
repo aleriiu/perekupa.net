@@ -22,6 +22,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8f3d135e97.js" crossorigin="anonymous"></script>
     <script defer src="./script.js"></script>
 </head>
 
@@ -71,6 +72,8 @@
                             pattern="[0-9+()-]+" required>
                         <textarea id="form-1-message" class="form__input-message" cols="37" name="message"
                             placeholder="Сообщение"></textarea>
+                        <input type="file" name="file" accept="image/*" data-multiple-caption="(count) файлов выбрано" multiple id="file" class="inputfile"  />
+                        <label for="file"><i class="fa-regular fa-images" style="color: #ffffff;"></i>&nbsp;ДОБАВИТЬ ФАЙЛЫ</label>
                         <div class="form__agreement">
                             <input class="form__checkbox" type="checkbox" id="politics" required>
                             <p class="checkbox-text">Я соглашаюсь на обработку моих персональных данных</p>
@@ -154,7 +157,8 @@
                             Как происходит оплата за автомобиль?
                         </div>
                         <div class="faq__content">
-                            <div class="faq__answer">Любым удобным для Вас способом: наличными или банковский перевод или криптовалюта.
+                            <div class="faq__answer">Любым удобным для Вас способом: наличными или банковский перевод
+                                или криптовалюта.
                             </div>
                         </div>
                     </div>

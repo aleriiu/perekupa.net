@@ -240,6 +240,28 @@ section,
     margin-left: 15px;
 }
 
+.inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    overflow: hidden;
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.inputfile + label {
+    border-radius: 8px;
+    background: #A5CD51;
+    border: 1px solid #A5CD51;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #FFFFFF;
+    padding: 0.875rem 1.25rem;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    cursor: pointer;
+}
+
 /* секция выкуп авто */
 
 .buyback {
