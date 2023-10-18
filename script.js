@@ -32,6 +32,11 @@ form.addEventListener('submit', async (e) => {
   const messageInputOne = form.querySelector('#form-1-message');
   const fileInputOne = form.querySelector('#file');
 
+  if (fileInputOne.files.length === 0) {
+    alert('Добавьте фотографии!')
+    return;
+  };
+
   const urlMedia = 'https://api.telegram.org/bot6663438165:AAESG6Jt1J3btraE_rz614EDDUf4jk0mQlM/sendMediaGroup';
 
   const text = `Сообщение из формы 1\r\n\r\nИмя: ${nameInputOne.value}\r\nТелефон: ${phoneInputOne.value}\r\nСообщение: ${messageInputOne.value}\r\nФайлы: ${fileInputOne.value}`;
@@ -43,7 +48,7 @@ form.addEventListener('submit', async (e) => {
 
   for (let i = 0; i < fileInputOne.files.length; i++) {
     const file = fileInputOne.files[i];
-    
+
     formData.append(file.name, file);
 
     let caption;
@@ -65,10 +70,8 @@ form.addEventListener('submit', async (e) => {
     body: formData,
   });
 
-  nameInputOne.value = '';
-  phoneInputOne.value = '';
-  messageInputOne.value = '';
-  fileInputOne.value = '';
+  form.reset();
+  fileInputOne.dispatchEvent(new Event('change'));
 
   alert('Сообщение отправлено!');
 
@@ -77,6 +80,8 @@ form.addEventListener('submit', async (e) => {
 // форма 2
 
 const formTwo = document.querySelector('#form-2');
+const label = document.querySelector('label');
+
 
 formTwo.addEventListener('submit', async (e) => {
   e.preventDefault();
@@ -100,6 +105,7 @@ formTwo.addEventListener('submit', async (e) => {
   phoneInputTwo.value = '';
   messageInputTwo.value = '';
 
+
   alert('Сообщение отправлено!');
 
 })
@@ -108,22 +114,22 @@ formTwo.addEventListener('submit', async (e) => {
 // прикрепление файлов в форме 
 function ready() {
 
-  let images = document.querySelectorAll(".inputfile");
+  let attachFile = document.querySelector(".inputfile");
 
-  Array.prototype.forEach.call(images, function (image) {
-
-    let label = image.nextElementSibling;
+    let label = attachFile.nextElementSibling;
     let labelVal = label.innerHTML;
 
-    image.addEventListener('change', function (e) {
+    attachFile.addEventListener('change', function (e) {
       console.log(this.files);
       let fileName = '';
-      if (this.files && this.files.length > 1) {
-        fileName = (this.getAttribute('data-multiple-caption') || '').replace('{count}', this.files.length);
+      if (this.files && this.files.length > 0) {
+        if (this.files.length > 1) {
+          fileName = (this.getAttribute('data-multiple-caption') || '').replace('{count}', this.files.length);
+        }
+        else {
+          fileName = this.files[0].name;
+        };
       }
-      else {
-        fileName = this.files[0].name;
-      };
 
       if (fileName) {
         label.innerHTML = fileName;
@@ -132,7 +138,6 @@ function ready() {
         label.innerHTML = labelVal;
       }
     });
-  });
 };
 
 document.addEventListener("DOMContentLoaded", ready);
