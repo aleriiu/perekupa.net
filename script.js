@@ -32,19 +32,37 @@ form.addEventListener('submit', async (e) => {
   const messageInputOne = form.querySelector('#form-1-message');
   const fileInputOne = form.querySelector('#file');
 
-  const url = 'https://api.telegram.org/bot6663438165:AAESG6Jt1J3btraE_rz614EDDUf4jk0mQlM/sendMessage';
+  const urlMedia = 'https://api.telegram.org/bot6663438165:AAESG6Jt1J3btraE_rz614EDDUf4jk0mQlM/sendMediaGroup';
 
   const text = `Сообщение из формы 1\r\n\r\nИмя: ${nameInputOne.value}\r\nТелефон: ${phoneInputOne.value}\r\nСообщение: ${messageInputOne.value}\r\nФайлы: ${fileInputOne.value}`;
 
+  const media = [];
+
   const formData = new FormData();
   formData.append('chat_id', 5067249552);
-  formData.append('parse_mode', 'Markdown');
-  formData.append('text', text);
-  formData.append('images', 'files[0].name');
 
-  const response = await fetch(url, {
+  for (let i = 0; i < fileInputOne.files.length; i++) {
+    const file = fileInputOne.files[i];
+    
+    formData.append(file.name, file);
+
+    let caption;
+    if (i === 0) {
+      caption = text;
+    }
+
+    media.push({
+      type: 'photo',
+      media: `attach://${file.name}`,
+      caption: caption
+    });
+  }
+
+  formData.append('media', JSON.stringify(media));
+
+  const responsePhoto = await fetch(urlMedia, {
     method: 'POST',
-    body: formData
+    body: formData,
   });
 
   nameInputOne.value = '';
