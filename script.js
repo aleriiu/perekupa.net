@@ -44,7 +44,7 @@ form.addEventListener('submit', async (e) => {
   const media = [];
 
   const formData = new FormData();
-  formData.append('chat_id', 5067249552);
+  formData.append('chat_id', 6679838375);
 
   for (let i = 0; i < fileInputOne.files.length; i++) {
     const file = fileInputOne.files[i];
