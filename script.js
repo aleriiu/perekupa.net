@@ -21,6 +21,8 @@ accordionItemHeaders.forEach(accordionItemHeader => {
 
 
 // форма 1
+const urlText = 'https://api.telegram.org/bot6663438165:AAESG6Jt1J3btraE_rz614EDDUf4jk0mQlM/sendMessage';
+const urlMedia = 'https://api.telegram.org/bot6663438165:AAESG6Jt1J3btraE_rz614EDDUf4jk0mQlM/sendMediaGroup';
 
 const form = document.querySelector('#form-1');
 
@@ -32,14 +34,12 @@ form.addEventListener('submit', async (e) => {
   const messageInputOne = form.querySelector('#form-1-message');
   const fileInputOne = form.querySelector('#file');
 
+  const text = `Сообщение из формы 1\r\n\r\nИмя: ${nameInputOne.value}\r\nТелефон: ${phoneInputOne.value}\r\nСообщение: ${messageInputOne.value}\r\nФайлы: ${fileInputOne.value}`;
+  
   if (fileInputOne.files.length === 0) {
-    alert('Добавьте фотографии!')
+    await sendTextMessage(text)
     return;
   };
-
-  const urlMedia = 'https://api.telegram.org/bot6663438165:AAESG6Jt1J3btraE_rz614EDDUf4jk0mQlM/sendMediaGroup';
-
-  const text = `Сообщение из формы 1\r\n\r\nИмя: ${nameInputOne.value}\r\nТелефон: ${phoneInputOne.value}\r\nСообщение: ${messageInputOne.value}\r\nФайлы: ${fileInputOne.value}`;
 
   const media = [];
 
@@ -88,19 +88,10 @@ formTwo.addEventListener('submit', async (e) => {
 
   const phoneInputTwo = formTwo.querySelector('#form-2-numb');
   const messageInputTwo = formTwo.querySelector('#form-2-message');
-  const urlTwo = 'https://api.telegram.org/bot6663438165:AAESG6Jt1J3btraE_rz614EDDUf4jk0mQlM/sendMessage';
 
   const text = `Сообщение из формы 2\r\nТелефон: ${phoneInputTwo.value}\r\nСообщение: ${messageInputTwo.value}`;
 
-  const formData = new FormData();
-  formData.append('chat_id', 6679838375);
-  formData.append('parse_mode', 'Markdown');
-  formData.append('text', text);
-
-  const response = await fetch(urlTwo, {
-    method: 'POST',
-    body: formData
-  });
+  await sendTextMessage(text);
 
   phoneInputTwo.value = '';
   messageInputTwo.value = '';
@@ -109,6 +100,19 @@ formTwo.addEventListener('submit', async (e) => {
   alert('Сообщение отправлено!');
 
 })
+
+
+async function sendTextMessage(text) {
+  const formData = new FormData();
+  formData.append('chat_id', 6679838375);
+  formData.append('parse_mode', 'Markdown');
+  formData.append('text', text);
+
+  const response = await fetch(urlText, {
+    method: 'POST',
+    body: formData
+  });
+}
 
 
 // прикрепление файлов в форме 
